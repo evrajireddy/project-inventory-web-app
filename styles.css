@@ -1,0 +1,256 @@
+/*
+  Google Fonts
+  https://fonts.google.com/specimen/Righteous
+*/
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+/* General styles */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #040f16;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Righteous, serif;
+  /* letter-spacing: 2px; */
+}
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+/* Header */
+
+header {
+  background: #040f16;
+  border-bottom: 5px solid #de6b48;
+  color: #ececec;
+  padding: 0.5rem 15%;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+
+
+nav ul {
+  padding: 15px 15px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+nav a {
+  color: #ececec;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #de6b48;
+}
+
+/*
+  Splash
+  Images from Unsplash: https://unsplash.com/
+*/
+
+.splash {
+  background-image: url("./images/ales-nesetril-unsplash.jpg");
+  background-position: 50% 50%;
+  background-size: 100%;
+  border-bottom: 5px solid #de6b48;
+}
+
+.splash h2 {
+  color: #ececec;
+  font-size: 5rem;
+  margin: 0;
+  padding: 20vh 0;
+  text-align: center;
+}
+
+/* Main */
+
+main {
+  margin: 3rem auto;
+
+  width: 70%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 3rem;
+}
+
+/* Articles */
+
+article {
+  line-height: 1.5rem;
+}
+
+article img {
+  border-radius: 15px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+
+aside {
+  padding-bottom: 10px;
+}
+
+aside a {
+  color: #587b7f;
+  text-decoration: none;
+}
+
+aside a:hover {
+  color: #de6b48;
+}
+
+/* Footer */
+
+footer {
+  background: #040f16;
+  color: #ececec;
+  padding: 50px 15% 25px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+footer h4 {
+  border-bottom: 1px solid #de6b48;
+  margin: 0;
+  max-width: 250px;
+  padding-bottom: 5px;
+}
+
+footer ul {
+  color: #de6b48;
+  list-style: square;
+  padding-left: 1rem;
+}
+
+footer ul li {
+  margin: 1rem 0;
+}
+
+footer a {
+  color: #de6b48;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ececec;
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 25%;
+  max-height:15%;
+  float: left;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20%;
+  float: left;
+}
+
+
+/*
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-gap: 1rem;
+  width: fit-content;
+}
+
+.container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--color, tomato);
+  aspect-ratio: 1/1;
+} */
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(500px, 1fr));
+  grid-gap: 1rem;
+  width: fit-content;
+}
+.column {
+  padding: 16px;
+  height: 250px;
+}
+
+.book-title{
+  text-decoration: underline;
+  text-decoration-color: gray;
+  
+}
+.book-author{
+  font-style: italic;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  header{
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+  main {
+    grid-template-columns: 1fr;
+    gap : 50px 0
+  }
+  footer{
+    padding: 25px;
+    text-align: center;
+  }
+  footer ul {
+    list-style: none
+  }
+}
+
+@media (min-width:768px ) and (max-width:1279px) {
+  .splash{
+    display: none;
+  }
+  main{
+    width: 90%;
+
+  }
+  footer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
